@@ -1,0 +1,14 @@
+
+	<nav class="sticky clearfix">
+   <div id="logo">
+     <%= image_tag "logo.png" %>
+    </div>		
+    <ul class="links clearfix">
+			<li class="current"><a href='/articles/new'>Search</a></li>
+			<li><a href='/articles'>Gallery</a></li>
+		</ul>
+	</nav>
+
+	<p id="notice"><%= notice %></p>
+
+	<iframe src="<%= @article.web_url.gsub("http:", "") %>"</iframe>

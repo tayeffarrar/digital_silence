@@ -1,0 +1,24 @@
+
+	<nav class="sticky clearfix">
+	  <div id="logo">
+      <%= image_tag "logo.png" %>
+    </div>		
+    <ul class="links clearfix">
+			<li class="current"><a href='/articles/new'>Search</a></li>
+			<li><a href='/articles'>Gallery</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<div class="intro-text">
+			<h1>Digital Silence:</h1>
+			<h2>A Tribute to On Kawara-Silence</h2>
+			<p>This is a digital recreation of the artist On Kawara's date paintings, the Today series, and their corresponding news-clippings from that day. The series were part of the late artist's exhibition at the Guggenheim. <a href="http://www.guggenheim.org/new-york/exhibitions/on-view/on-kawara-silence">Read More</a></p>
+			<h3>Create a date painting</h3>
+		<!-- <div class="date-form"> -->
+			<%= form_for Article.new do |f| %>
+	    	<%= f.date_select :pub_date, :order => [:month, :day, :year], start_year: 1851, end_year: Date.today.year %>
+	    	<a><%= f.submit %></a>
+			<% end %>
+		</div>
+	</section>
